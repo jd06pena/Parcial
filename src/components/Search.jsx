@@ -24,7 +24,7 @@ export const Search = ({ placeholder, onSearch }) => {
       if (search.trim() === "") return;
       onSearch(search);
       setSearch("");
-    }, 1000);
+    }, 10000);
 
     return () => {
       clearTimeout(timer);
