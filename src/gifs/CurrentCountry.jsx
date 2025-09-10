@@ -1,0 +1,34 @@
+import PropTypes from "prop-types";
+
+export const CurrentCountry = ({ contrys }) => {
+  console.log("Datos recibidos en CurrentCountry:", contrys); // <-- Depuración
+
+  if (!contrys || contrys.length === 0) {
+    return <p>No hay países para mostrar.</p>;
+  }
+
+  return (
+    <div className="gifs-container">
+      {contrys.map((country, idx) => (
+        <div key={country.code || idx}>
+          <ul>
+            <li>{country.name}</li>
+            <li>{country.code}</li>
+            <li>
+              <img src={country.flag} alt={country.name} />
+            </li>
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+CurrentCountry.propTypes = {
+  contrys: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
