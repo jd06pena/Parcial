@@ -5,6 +5,7 @@ import { CurrentCountry } from "./gifs/CurrentCountry";
 // import { mockGifs } from "./mock-data/gif.mock";
 import { useState } from "react";
 import { getCountryByQuery } from "./actions/getCountryByQuery";
+import './App.css';
 
 export const GifsApp = () => {
   const [previousSearches, setPreviousSearches] = useState([]);
@@ -25,6 +26,7 @@ export const GifsApp = () => {
 
   return (
     <>
+    <div className="container_app">
     {/* Componente Header */}
       <Header title="Paises" description="Buscador de paises" />
       {/* Componente Search */}
@@ -38,7 +40,7 @@ export const GifsApp = () => {
       />
       {/* Componente Gifs actuales */}
       <CurrentCountry contrys={country} />
-
+</div>
       
     </>
   );

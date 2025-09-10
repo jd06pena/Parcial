@@ -12,11 +12,11 @@ export const CurrentCountry = ({ contrys }) => {
       {contrys.map((country, idx) => (
         <div key={country.code || idx}>
           <ul>
-            <li>{country.name}</li>
-            <li>{country.code}</li>
-            <li>
+            <ul>{country.name}</ul>
+            <ul>{country.code}</ul>
+            <ul>
               <img src={country.flag} alt={country.name} />
-            </li>
+            </ul>
           </ul>
         </div>
       ))}
