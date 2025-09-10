@@ -8,7 +8,7 @@ import { getCountryByQuery } from "./actions/getCountryByQuery";
 
 export const GifsApp = () => {
   const [previousSearches, setPreviousSearches] = useState([]);
-  const [gifs, setGifs] = useState([]);
+  const [country, setCountry] = useState([]);
 
   const handleSearch = (search = "") => {
     const newSearch = search.trim().toLowerCase();
@@ -20,7 +20,7 @@ export const GifsApp = () => {
   const handlePreviousSearchClick = async (search) => {
     const result = await getCountryByQuery(search);
     setPreviousSearches(previousSearches.filter((s) => s !== search));
-    setGifs([...result, ...gifs]);
+    setCountry([...result, ...country]);
   };
 
   return (
@@ -37,7 +37,7 @@ export const GifsApp = () => {
         onPreviousSearchClick={handlePreviousSearchClick}
       />
       {/* Componente Gifs actuales */}
-      <CurrentCountry gifs={gifs} />
+      <CurrentCountry contrys={country} />
 
       
     </>
