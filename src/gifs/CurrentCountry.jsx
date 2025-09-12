@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import '../Card.css';
 
 export const CurrentCountry = ({ contrys }) => {
   console.log("Datos recibidos en CurrentCountry:", contrys); // <-- Depuración
@@ -8,9 +9,9 @@ export const CurrentCountry = ({ contrys }) => {
   }
 
   return (
-    <div className="gifs-container">
+    <div className="div_prin" >
       {contrys.map((country, idx) => (
-        <div key={country.code || idx}>
+        <div className="gifs-container"  key={country.code || idx}>
           <ul>
             <ul>{country.name}</ul>
             <ul>{country.code}</ul>
