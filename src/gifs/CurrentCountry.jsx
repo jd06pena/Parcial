@@ -15,10 +15,11 @@ export const CurrentCountry = ({ contrys }) => {
           <ul>
             <ul>{country.name}</ul>
             <ul>{country.code}</ul>
+            <ul>location: {country.location ? country.location.join(", ") : "N/A"}</ul>
             <ul>
               <img src={country.flag} alt={country.name} />
             </ul>
-            <ul>location: {country.location ? country.location.join(", ") : "N/A"}</ul>
+            
           </ul>
         </div>
       ))}
