@@ -1,9 +1,11 @@
 html,
 body {
-  background-color: #242424;
-  color: #fff;
+  background-color: #585757;
+  color: #000000;
   font-family: 'Montserrat Alternates', sans-serif;
+   backdrop-filter: blur(8px);
 }
+
 
 h1 {
   font-size: 2rem;
