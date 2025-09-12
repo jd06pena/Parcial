@@ -11,6 +11,8 @@ export const getCountryByQuery = async (query) => {
       name: country.name.common,
       code: country.cca2,
       flag: country.flags.svg,
+      location: country.latlng,
+      
       
     };
   });
